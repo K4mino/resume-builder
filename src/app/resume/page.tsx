@@ -34,7 +34,8 @@ export default function Resume() {
   ]);
 
 
-
+  if (typeof window !== 'undefined') {
+  
   const Download = async() => {
     const opt = {
       margin: [0,10,0,0], // Margins in millimeters
@@ -52,7 +53,6 @@ export default function Resume() {
     await html2pdf().from(ref.current).set(opt).save()
   }
 
-  
 
   const handleDragStart = (e:React.DragEvent, sectionIndex:number) => {
     e.dataTransfer.setData('text/plain', sectionIndex.toString());
@@ -105,8 +105,6 @@ const handleTouchEnd = (e: React.TouchEvent, targetSectionIndex: number) => {
   touchStartIndex = -1;
 };
 
-  
-
   return (
     <main className={styles.main}>
       <button onClick={Download}>Download</button>
@@ -136,4 +134,6 @@ const handleTouchEnd = (e: React.TouchEvent, targetSectionIndex: number) => {
       </div>
     </main>
   )
+}
+
 }
