@@ -8,11 +8,7 @@ import Input from "./Input";
 import NestedFields from "./NestedFields";
 
 interface FormValues {
-  firstname: string;
-  lastname: string;
-  portfolio: string;
-  linkedin: string;
-  email: string;
+  
 }
 
 const StepThree = () => {

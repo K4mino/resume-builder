@@ -7,8 +7,7 @@ import styles from "./steps.module.css";
 import Input from './Input';
 
 interface FormValues {
-    firstname:string,
-    lastname:string,
+    fullname:string,
     portfolio:string,
     linkedin:string,
     email:string

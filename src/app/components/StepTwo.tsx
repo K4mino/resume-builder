@@ -7,11 +7,8 @@ import Input from './Input';
 import styles from "./steps.module.css";
 
 interface FormValues {
-  firstname:string,
-  lastname:string,
-  portfolio:string,
-  linkedin:string,
-  email:string
+  school:string,
+  
 }
 
 const StepTwo = () => {
