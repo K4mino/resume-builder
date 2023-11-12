@@ -1,5 +1,5 @@
 "use client"
-import html2pdf from 'html2pdf.js'
+//import html2pdff from 'html2pdf.js'
 import { useRef,useState } from 'react'
 import Link from 'next/link'
 import styles from './resume.module.css'
@@ -9,6 +9,12 @@ import Skills from './sections/Skills';
 import SectionComponent from './sections/SectionComponent';
 import { useFormState } from "../components/FormContext";
 import Projects from './sections/Projects';
+
+let html2pdf:any
+
+if (typeof window !== 'undefined') {
+    html2pdf = require('html2pdf.js');
+}
 
 export default function Resume() {
   const ref = useRef(null)
@@ -33,9 +39,6 @@ export default function Resume() {
     }
   ]);
 
-
-  if (typeof window !== 'undefined') {
-  
   const Download = async() => {
     const opt = {
       margin: [0,10,0,0], // Margins in millimeters
@@ -134,6 +137,4 @@ const handleTouchEnd = (e: React.TouchEvent, targetSectionIndex: number) => {
       </div>
     </main>
   )
-}
-
 }

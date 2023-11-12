@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../resume.module.css";
 import { useFormState } from "../../components/FormContext";
 
-type Education = {
+type EducationItem = {
   school:string;
   degree:string;
   startDate:string;
@@ -20,7 +20,7 @@ const Education = () => {
   return (
     <div className={styles.education}>
       <div className={styles.sectionHeader}>Education</div>
-      {formData?.educations.map((item:Education, i:number) => (
+      {formData?.educations.map((item:EducationItem, i:number) => (
         <div key={i} className={styles.listItem}>
           <div className={styles.listItemTitle}>
             <b>{item.school}</b>
