@@ -35,18 +35,19 @@ const NestedFields: React.FC<NestedFieldsProps> = ({
     <div>
       {fields.map(({ id }, i) => {
         return (
-          <div key={id}>
+          <div className={styles.field} key={id}>
             <label>{label}:</label>
             <input
+              autoComplete="off"
               className={styles.input}
               {...register(`${arrayName}.${nestIndex}.${nestedArrayName}.${i}`)}
             />
             <button
-              className={`${styles.btn} ${styles.delete}`}
+              className={`${styles.btn} ${styles.deleteX}`}
               type="button"
               onClick={() => remove(i)}
             >
-              {deleteBtnText}
+              ✖
             </button>
           </div>
         );

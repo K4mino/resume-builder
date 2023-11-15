@@ -110,10 +110,13 @@ const handleTouchEnd = (e: React.TouchEvent, targetSectionIndex: number) => {
 
   return (
     <main className={styles.main}>
-      <button onClick={Download}>Download</button>
       <div>
-        <Link href={'/'}>Back</Link>
+        <button className={styles.btn}>
+          <Link href={'/'}>Back</Link>
+        </button>
+        <button className={`${styles.btn} ${styles.download}`} onClick={Download}>Download</button>
       </div>
+      <h2>You can drag and drop sections</h2>
       <div ref={ref} className={styles.resume}>
         <h1 className={styles.header}>{formData.fullname}</h1>
         <div className={styles.contacts}>

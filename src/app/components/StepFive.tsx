@@ -68,7 +68,7 @@ const StepFive = () => {
         ))}
         <button
           type="button"
-          className={styles.btn}
+          className={`${styles.btn} ${styles.add}`}
           onClick={() => append({})}
         >
           Add Project

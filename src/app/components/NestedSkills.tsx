@@ -30,7 +30,7 @@ const Skill: React.FC<SkillProps> = ({ nestIndex, control, register }) => {
             required
             {...register(`skillList.${nestIndex}.skills.${i}`)}
           />
-          <button className={`${styles.btn} ${styles.deleteSkill}`}  type="button" onClick={() => remove(i)}>
+          <button className={`${styles.btn} ${styles.deleteX}`}  type="button" onClick={() => remove(i)}>
             ✖
           </button>
         </div>

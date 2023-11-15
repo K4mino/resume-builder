@@ -43,9 +43,11 @@ const StepTwo = () => {
             </div>
           ))
         }
-          <button type='button' className={styles.btn} onClick={() => append({school:'',degree:''})}>Add education</button>
-          <button type='button' className={styles.btn} onClick={handlePrev}>Previous</button>
-          <button type='submit' className={styles.btn}>Next</button>
+          <button type='button' className={`${styles.btn} ${styles.add}`} onClick={() => append({school:'',degree:''})}>Add education</button>
+          <div className={styles.buttonBox}>
+            <button type='button' className={`${styles.btn} ${styles.switch}`} onClick={handlePrev}>Previous</button>
+            <button type='submit' className={`${styles.btn} ${styles.switch}`}>Next</button>
+          </div>
       </form>
     </div>
   )

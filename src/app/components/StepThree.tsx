@@ -58,7 +58,7 @@ const StepThree = () => {
               nestedArrayName="accomplishments"
               appendBtnText="Append Accomplishment"
               deleteBtnText="Delete Accomplishment"
-              label="Accomplishments"
+              label="Accomplishment"
               nestIndex={i}
               {...{ control, register }}
             />
@@ -66,23 +66,25 @@ const StepThree = () => {
               className={`${styles.btn} ${styles.delete}`}
               onClick={() => remove(i)}
             >
-              Delete
+              Delete Experience
             </button>
           </div>
         ))}
         <button
           type="button"
-          className={styles.btn}
+          className={`${styles.btn} ${styles.add}`}
           onClick={() => append({ school: "", degree: "" })}
         >
           Add experience
         </button>
-        <button type="button" className={styles.btn} onClick={handlePrev}>
-          Previous
-        </button>
-        <button type="submit" className={styles.btn}>
-          Next
-        </button>
+        <div className={styles.buttonBox}>
+          <button type="button" className={`${styles.btn} ${styles.switch}`} onClick={handlePrev}>
+            Previous
+          </button>
+          <button type="submit" className={`${styles.btn} ${styles.switch}`}>
+            Next
+          </button>
+        </div>
       </form>
     </div>
   );

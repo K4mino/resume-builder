@@ -3,6 +3,44 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
+}
+
+.btn{
+  min-height: 30px;
+  cursor: pointer;
+  background-color: #0380f9;
+  color: #fff;
+  outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding: 10px 15px;
+  width: 120px;
+  border: 1px solid #0380f9;
+  transition:all .3s ease;
+  -webkit-transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  -ms-transition:all .3s ease;
+  -o-transition:all .3s ease;
+  font-weight: 600;
+}
+
+.btn.download{
+  background-color: #11998e;
+  border-color: #11998e;
+}
+
+.btn.download:hover{
+ color: #11998e; 
+}
+
+.btn:hover{
+  background-color: #fff;
+  background-position: 0 0;
+  color: #0380f9;
 }
 
 .resume {
@@ -83,17 +121,3 @@
     gap: 5px;
   }
 
-
-@media (max-width:760px){
-  .list{
-    font-size: 14px;
-  }
-
-  .listItemDate{
-    font-size: 12px;
-  }
-
-  .listItemTitle{
-    font-size: 14px;
-  }
-}
