@@ -35,7 +35,7 @@ const NestedFields: React.FC<NestedFieldsProps> = ({
     <div>
       {fields.map(({ id }, i) => {
         return (
-          <div className={styles.field} key={id}>
+          <div className={styles.field} key={id} style={{alignItems: 'center'}}>
             <label>{label}:</label>
             <input
               autoComplete="off"
