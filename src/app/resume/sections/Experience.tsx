@@ -2,7 +2,6 @@
 import React from "react";
 import styles from "../resume.module.css";
 import { useFormState } from "../../components/FormContext";
-
 interface ExperienceItem {
   company:string,
   position:string,

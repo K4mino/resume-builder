@@ -1,5 +1,5 @@
 "use client"
-//import html2pdff from 'html2pdf.js'
+import html2pdff from 'html2pdf.js'
 import { useRef,useState } from 'react'
 import Link from 'next/link'
 import styles from './resume.module.css'
@@ -10,14 +10,17 @@ import SectionComponent from './sections/SectionComponent';
 import { useFormState } from "../components/FormContext";
 import Projects from './sections/Projects';
 
+
 let html2pdf:any
 
 if (typeof window !== 'undefined') {
     html2pdf = require('html2pdf.js');
+  
 }
 
 export default function Resume() {
   const ref = useRef(null)
+
   const { formData } = useFormState();
 
   const [sections, setSections] = useState([
@@ -40,6 +43,7 @@ export default function Resume() {
   ]);
 
   const Download = async() => {
+
     const opt = {
       margin: [0,10,0,0], // Margins in millimeters
       enableLinks:true,
@@ -108,6 +112,7 @@ const handleTouchEnd = (e: React.TouchEvent, targetSectionIndex: number) => {
   touchStartIndex = -1;
 };
 
+
   return (
     <main className={styles.main}>
       <div>
@@ -116,7 +121,7 @@ const handleTouchEnd = (e: React.TouchEvent, targetSectionIndex: number) => {
         </button>
         <button className={`${styles.btn} ${styles.download}`} onClick={Download}>Download</button>
       </div>
-      <h2>You can drag and drop sections</h2>
+      <h2>You can drag and drop sections to reorder them</h2>
       <div ref={ref} className={styles.resume}>
         <h1 className={styles.header}>{formData.fullname}</h1>
         <div className={styles.contacts}>
